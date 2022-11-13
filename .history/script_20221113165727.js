@@ -26,26 +26,22 @@ for (i = 0; i < 3; i++){
     // create button, add button className depending on i value
     const button = document.createElement("button");
     
-    let buttonClassName = "btn btn-warning";
-    let buttonMessage = "This is a warning!"
+    let buttonClassName = "btn btn-success";
    
     if (i === 1) {
         buttonClassName = "btn btn-success";
         button.textContent = "Success";
-        buttonMessage = "This was a success!";
     } else if (i === 2) {
         buttonClassName = "btn btn-danger";
         button.textContent = "Danger";
-        buttonMessage = "This is dangerous!";
     } else {
         buttonClassName = "btn btn-warning";
         button.textContent = "Warning";
-        buttonMessage = "This is a warning!";
     }
     
     button.className = buttonClassName;
 
-    addingEventListener(button, buttonMessage);
+    addingEventListener(button, message);
    
     // add div column to row
     document.querySelector("#main-div-row").appendChild(div);

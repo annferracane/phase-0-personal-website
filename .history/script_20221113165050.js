@@ -1,6 +1,3 @@
-// dynamically build web structure using bootstrap framework
-// bootstrap: 
-
 const divContainer = document.createElement("div");
 divContainer.id = "main-div-container";
 divContainer.className = "container text-center";
@@ -19,34 +16,29 @@ for (i = 0; i < 3; i++){
 
     // create div for text
     const divText = document.createElement("div");
-    divText.textContent = `This is column ${i}. Push the button!`
+    divText.textContent = `This is column ${i}.`
     divText.className = "colText";
     divText.id = `main-div-col-text-${i}`;
 
     // create button, add button className depending on i value
     const button = document.createElement("button");
     
-    let buttonClassName = "btn btn-warning";
-    let buttonMessage = "This is a warning!"
+    let buttonClassName = "btn btn-success";
    
     if (i === 1) {
         buttonClassName = "btn btn-success";
         button.textContent = "Success";
-        buttonMessage = "This was a success!";
     } else if (i === 2) {
         buttonClassName = "btn btn-danger";
         button.textContent = "Danger";
-        buttonMessage = "This is dangerous!";
     } else {
         buttonClassName = "btn btn-warning";
         button.textContent = "Warning";
-        buttonMessage = "This is a warning!";
     }
     
     button.className = buttonClassName;
-
-    addingEventListener(button, buttonMessage);
    
+    
     // add div column to row
     document.querySelector("#main-div-row").appendChild(div);
 
@@ -57,16 +49,6 @@ for (i = 0; i < 3; i++){
     document.querySelector(`#main-div-col-${i}`).appendChild(button);
 }
 
-
-// add an event handler for the buttons
-function addingEventListener(element, message) {
-
-    function clickAlert() {
-        alert(message);
-    }
-
-    element.addEventListener('click', clickAlert);
-}
 
 
 

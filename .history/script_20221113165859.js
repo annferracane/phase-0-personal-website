@@ -45,7 +45,7 @@ for (i = 0; i < 3; i++){
     
     button.className = buttonClassName;
 
-    addingEventListener(button, buttonMessage);
+    ;addingEventListener(button, message);
    
     // add div column to row
     document.querySelector("#main-div-row").appendChild(div);
